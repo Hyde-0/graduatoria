@@ -4,7 +4,7 @@ import 'dotenv/config'; // Deve essere la PRIMA riga
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { supabase } from './db.js'; // Importa dopo dotenv
+import { supabase } from './db.config.js'; // Importa dopo dotenv
 
 // Mostra le variabili di ambiente caricate
 console.log('SUPABASE_URL from env:', process.env.SUPABASE_URL);
@@ -74,6 +74,7 @@ app.get('/scores', async (req, res) => {
   res.json(data);
 });
 
-app.listen(PORT, () => {
-  console.log(`Server in ascolto su http://localhost:${PORT}`);
+const porta = process.env.PORT || process.env.porta || 3000;
+app.listen(porta, () => {
+  console.log(`Server in ascolto sulla porta ${porta}`);
 });
