@@ -1,0 +1,36 @@
+* { box-sizing:border-box; margin:0; padding:0; }
+body {
+  font-family:'Segoe UI',sans-serif;
+  background:#f5f0e6;
+  display:flex; justify-content:center; padding:20px;
+}
+.container {
+  width:100%; max-width:600px;
+  background:#fff; padding:20px;
+  border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.05);
+}
+h1,h2 { text-align:center; color:#5a4d3b; margin-bottom:16px; }
+form {
+  display:flex; gap:8px; margin-bottom:20px; justify-content:center;
+}
+form input {
+  flex:1; padding:8px; border:1px solid #ccc; border-radius:5px;
+}
+form button {
+  padding:8px 12px; border:none; border-radius:5px;
+  background:#d8c3a5; color:#5a4d3b; cursor:pointer; font-weight:bold;
+}
+form button:hover { background:#c2b092; }
+.hidden { display:none; }
+#scoreList {
+  list-style:none; margin-bottom:24px;
+}
+#scoreList li {
+  display:flex; justify-content:space-between;
+  padding:10px; border-bottom:1px solid #eee;
+}
+#scoreList li button {
+  background:transparent; border:none; cursor:pointer; color:#a00;
+}
+canvas { width:100% !important; height:300px !important; }
+

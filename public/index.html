@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Graduatoria Test Ingegneria</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Graduatoria Test Ingegneria</h1>
+
+    <form id="scoreForm">
+      <input type="number" id="scoreInput" placeholder="0–100" min="0" max="100" step="0.1" required/>
+      <button type="submit">Salva</button>
+      <button type="button" id="cancelBtn" class="hidden">Annulla</button>
+    </form>
+
+    <ul id="scoreList"></ul>
+
+    <h2>Distribuzione di Probabilità</h2>
+    <canvas id="distChart"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
