@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# File with credentials
+db.js
+
+# Environment variables
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Optional npm cache directory
+.npm
+
+# Mac files
+.DS_Store
+
+# Windows files
+Thumbs.db
