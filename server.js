@@ -1,5 +1,5 @@
 import express from 'express';
-import { supabase } from './db.js';
+import { supabase } from './db.config.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
