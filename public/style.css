@@ -5,7 +5,7 @@ body {
   display:flex; justify-content:center; padding:20px;
 }
 .container {
-  width:100%; max-width:600px;
+  width:100%; max-width:800px;
   background:#fff; padding:20px;
   border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.05);
 }
@@ -29,8 +29,39 @@ form button:hover { background:#c2b092; }
   display:flex; justify-content:space-between;
   padding:10px; border-bottom:1px solid #eee;
 }
+#scoreList li.user-score {
+  background-color: rgba(216, 195, 165, 0.2);
+  font-weight: bold;
+}
 #scoreList li button {
   background:transparent; border:none; cursor:pointer; color:#a00;
 }
-canvas { width:100% !important; height:300px !important; }
+.chart-container {
+  margin-top: 30px;
+
+}
+.chart-info {
+  font-size: 0.85rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 15px;
+  padding: 0 20px;
+}
+canvas { width:100% !important; height:350px !important; } /* Aumentato da 300px a 450px */
+#cancelBtn {
+  background-color: #d9534f;
+  color: white;
+}
+#cancelBtn:hover {
+  background-color: #c9302c;
+}
+.score-container {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 10px;
+}
+
 
