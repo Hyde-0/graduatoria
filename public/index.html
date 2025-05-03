@@ -14,14 +14,7 @@
   <link rel="canonical" href="https://tuosito.it/"> <!-- ← aggiorna con il dominio corretto -->
   <link rel="stylesheet" href="style.css"/>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <meta name="description" content= 
-  "Come interpretare il grafico dei percentili:
-    Il grafico mostra la distribuzione dei punteggi inseriti sotto forma di curva di densità. L'asse orizzontale (X) rappresenta il punteggio ottenuto (da 0 a 100), mentre l'asse verticale (Y) indica la <em>frequenza relativa con cui quei punteggi sono stati inseriti dagli utenti.
-    La curva ti aiuta a capire se il tuo punteggio è più alto, nella media o sotto la media rispetto agli altri. 
-    Ad esempio: Un picco alto attorno a 60 indica che molti utenti hanno segnato quel punteggio.
-    Se il tuo punteggio è in una zona dove la curva è bassa, sei tra i meno comuni (più alto o più basso della media).
-    Questo può darti un’idea orientativa di dove ti posizioni rispetto agli altri, ma non ha valore ufficiale.">
-  
+
 </head>
 
 <body>
@@ -43,6 +36,19 @@
       <h2>Distribuzione di Probabilità</h2>
       <canvas id="distChart"></canvas>
     </div>
+<!-- Spiegazione del grafico -->
+<section id="grafico-info" style="font-size: 0.9em; color: #444; margin-top: 15px;">
+  <h3 style="font-size: 1em; margin-bottom: 5px;">Come interpretare il grafico dei percentili</h3>
+  <p>
+    Il grafico mostra la distribuzione dei punteggi inseriti sotto forma di curva di densità. L'asse orizzontale (X) rappresenta il punteggio ottenuto (da 0 a 100), mentre l'asse verticale (Y) indica la frequenza relativa con cui quei punteggi sono stati inseriti dagli utenti.
+  </p>
+  <p>
+    La curva ti aiuta a capire se il tuo punteggio è più alto, nella media o sotto la media rispetto agli altri. Un picco alto attorno a 60 indica che molti utenti hanno segnato quel punteggio. Se il tuo punteggio è in una zona dove la curva è bassa, sei tra i meno comuni (più alto o più basso della media).
+  </p>
+  <p>
+    Questo può darti un’idea orientativa di dove ti posizioni rispetto agli altri, ma non ha valore ufficiale.
+  </p>
+</section>
 
     <!-- Disclaimer etico -->
     <section id="disclaimer" style="font-size: 0.9em; color: #555; margin-top: 20px;">
@@ -50,10 +56,8 @@
     </section>
   </div>
 
-  
-  
-
   <script src="script.js?v=123" defer></script>
 </body>
 </html>
+
 
