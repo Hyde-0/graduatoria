@@ -3,10 +3,18 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Graduatoria Test Ingegneria</title>
+  <title>Graduatoria Test Ingegneria - Progetto Non Ufficiale</title>
+
+  <!-- SEO e Meta Tag -->
+  <meta name="description" content="Progetto indipendente e non ufficiale per visualizzare una graduatoria anonima dei punteggi al test di ingegneria. I dati sono inseriti dagli utenti e non verificati.">
+  <meta name="keywords" content="TOL, Ingegneria, Graduatoria, Test Ingresso, Politecnico di Milano, Punteggi, Statistiche, Progetto Studentesco">
+  <meta name="author" content="Progetto studentesco">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tuosito.it/"> <!-- ← aggiorna con il dominio corretto -->
   <link rel="stylesheet" href="style.css"/>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
   <div class="container">
     <h1>Graduatoria Test Ingegneria</h1>
@@ -26,6 +34,11 @@
       <h2>Distribuzione di Probabilità</h2>
       <canvas id="distChart"></canvas>
     </div>
+
+    <!-- Disclaimer etico -->
+    <section id="disclaimer" style="font-size: 0.9em; color: #555; margin-top: 20px;">
+      <p><strong>Nota:</strong> Questo sito è un progetto indipendente e <strong>non ufficiale</strong>, creato a scopo informativo e sperimentale. I dati inseriti sono anonimi, <strong>non verificati</strong> e potrebbero non rappresentare punteggi reali.</p>
+    </section>
   </div>
 
   <script src="script.js?v=123" defer></script>
