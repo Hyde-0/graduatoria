@@ -237,7 +237,29 @@ app.get('/view-index', (req, res) => {
   }
 });
 
-// Avvia il server
+// Servi robots.txt
+app.get('/robots.txt', (req, res) => {
+  console.log('[Render Debug] Servendo robots.txt');
+  res.type('text/plain');
+  res.send('User-agent: *\nAllow: /\nSitemap: https://graduatoria.onrender.com/sitemap.xml');
+});
+
+// Servi sitemap.xml
+app.get('/sitemap.xml', (req, res) => {
+  console.log('[Render Debug] Servendo sitemap.xml');
+  res.type('application/xml');
+  res.send(`<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://graduatoria.onrender.com/</loc>
+    <lastmod>${new Date().toISOString().slice(0, 10)}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>`);
+});
+
+// Avvia il server (una sola volta alla fine del file)
 app.listen(PORT, () => {
   console.log(`[Render Debug] Server in esecuzione sulla porta ${PORT}`);
   console.log(`[Render Debug] NODE_ENV: ${process.env.NODE_ENV || 'non impostato'}`);
