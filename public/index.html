@@ -7,14 +7,38 @@
 
   <!-- SEO e Meta Tag -->
   <meta name="description" content="
-    Questo sito è un progetto indipendente e non ufficiale, creato da studenti per aiutare altri candidati del test di ingegneria (TOL) a stimare i punteggi minimi d’accesso. I dati inseriti sono anonimi e liberi: non sono verificati né garantiti, quindi non rappresentano una graduatoria ufficiale del Politecnico di Milano. L'obiettivo è fornire una panoramica statistica basata sulle segnalazioni volontarie di altri partecipanti.">
+    Questo sito è un progetto indipendente e non ufficiale, creato da studenti per aiutare altri candidati del test di ingegneria (TOL) a stimare i punteggi minimi d'accesso. I dati inseriti sono anonimi e liberi: non sono verificati né garantiti, quindi non rappresentano una graduatoria ufficiale del Politecnico di Milano. L'obiettivo è fornire una panoramica statistica basata sulle segnalazioni volontarie di altri partecipanti.">
   <meta name="keywords" content="TOL, Ingegneria, Graduatoria, Test Ingresso, Politecnico di Milano, Punteggi, Statistiche, Progetto Studentesco">
   <meta name="author" content="Progetto studentesco">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://tuosito.it/"> <!-- ← aggiorna con il dominio corretto -->
+  <link rel="canonical" href="https://graduatoria.onrender.com/">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Graduatoria Test Ingegneria - Progetto Studentesco">
+  <meta property="og:description" content="Strumento non ufficiale per confrontare i punteggi del test di ingegneria e visualizzare statistiche sui percentili. Creato da studenti per studenti.">
+  <meta property="og:url" content="https://graduatoria.onrender.com/">
+  <meta property="og:type" content="website">
+  
+  <!-- Dati strutturati Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Graduatoria Test Ingegneria",
+    "description": "Strumento non ufficiale per confrontare i punteggi del test di ingegneria e visualizzare statistiche sui percentili.",
+    "url": "https://graduatoria.onrender.com/",
+    "applicationCategory": "EducationalApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    },
+    "operatingSystem": "All"
+  }
+  </script>
+  
   <link rel="stylesheet" href="style.css"/>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 </head>
 
 <body>
@@ -36,19 +60,20 @@
       <h2>Distribuzione di Probabilità</h2>
       <canvas id="distChart"></canvas>
     </div>
-<!-- Spiegazione del grafico -->
-<section id="grafico-info" style="font-size: 0.9em; color: #444; margin-top: 15px;">
-  <h3 style="font-size: 1em; margin-bottom: 5px;">Come interpretare il grafico dei percentili</h3>
-  <p>
-    Il grafico mostra la distribuzione dei punteggi inseriti sotto forma di curva di densità. L'asse orizzontale (X) rappresenta il punteggio ottenuto (da 0 a 100), mentre l'asse verticale (Y) indica la frequenza relativa con cui quei punteggi sono stati inseriti dagli utenti.
-  </p>
-  <p>
-    La curva ti aiuta a capire se il tuo punteggio è più alto, nella media o sotto la media rispetto agli altri. Un picco alto attorno a 60 indica che molti utenti hanno segnato quel punteggio. Se il tuo punteggio è in una zona dove la curva è bassa, sei tra i meno comuni (più alto o più basso della media).
-  </p>
-  <p>
-    Questo può darti un’idea orientativa di dove ti posizioni rispetto agli altri, ma non ha valore ufficiale.
-  </p>
-</section>
+    
+    <!-- Spiegazione del grafico -->
+    <section id="grafico-info" style="font-size: 0.9em; color: #444; margin-top: 15px;">
+      <h3 style="font-size: 1em; margin-bottom: 5px;">Come interpretare il grafico dei percentili</h3>
+      <p>
+        Il grafico mostra la distribuzione dei punteggi inseriti sotto forma di curva di densità. L'asse orizzontale (X) rappresenta il punteggio ottenuto (da 0 a 100), mentre l'asse verticale (Y) indica la frequenza relativa con cui quei punteggi sono stati inseriti dagli utenti.
+      </p>
+      <p>
+        La curva ti aiuta a capire se il tuo punteggio è più alto, nella media o sotto la media rispetto agli altri. Un picco alto attorno a 60 indica che molti utenti hanno segnato quel punteggio. Se il tuo punteggio è in una zona dove la curva è bassa, sei tra i meno comuni (più alto o più basso della media).
+      </p>
+      <p>
+        Questo può darti un'idea orientativa di dove ti posizioni rispetto agli altri, ma non ha valore ufficiale.
+      </p>
+    </section>
 
     <!-- Disclaimer etico -->
     <section id="disclaimer" style="font-size: 0.9em; color: #555; margin-top: 20px;">
@@ -56,8 +81,6 @@
     </section>
   </div>
 
-  <script src="script.js?v=123" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
-
-
